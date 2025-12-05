@@ -3,6 +3,7 @@ pub enum Command {
     Invalid,
 }
 
+//Command
 pub fn parse_args() -> Command {
     let args: Vec<String> = std::env::args().collect();
 
