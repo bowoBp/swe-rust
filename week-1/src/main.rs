@@ -1,20 +1,21 @@
+mod cli;
 
 fn main() {
     println!("Hello, world!");
-    // let number = 121;
-    // let result = is_palindrome(number);
-    // println!("result is {}", result);
+    let number = 121;
+    let result = is_palindrome(number);
+    println!("result is {}", result);
 
-    let result = calculator(5, 2, "$");
-    let result2=  match result {
-        Ok(v) => v,
-        Err(e) => {
-            println!("Error: {}", e);
-            return;
-        }
-    };
-
-    println!("Result2: {}", result2);
+    // let result = calculator(5, 2, "$");
+    // let result2=  match result {
+    //     Ok(v) => v,
+    //     Err(e) => {
+    //         println!("Error: {}", e);
+    //         return;
+    //     }
+    // };
+    //
+    // println!("Result2: {}", result2);
 
 
 
@@ -27,12 +28,12 @@ fn is_palindrome(num: i32) -> bool {
 
     while left < right {
         if chars[left] != chars[right] {
-            return false;
+            false;
         }
         right -= 1;
         left += 1;
     }
-    return true
+     true
 }
 
 fn calculator(
